@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mahadev</title>
+	
+	<style >
+		p{
+			margin-right: 700px;
+			margin-left: 30px;
+			font-size: 20px;
+			color: white;
+		}
+		h2{
+			margin-left: 15px;
+			text-decoration: underline;
+  	 		color: violet;
+  	 		font-size: 30px;
+		}
+		hr{
+			color: black;
+			margin-right: 700px;
+		}
+
+		body {
+  				background-image: url(airplane.jpg);
+  				background-repeat: no-repeat;
+  				background-size: cover;
+  				background-attachment: fixed;
+  				 
+  			
+}
+	</style>
+</head>
+<body >
+	<fieldset>
+	<fieldset style="background-color: #10103d; text-align: center; font-size: 20px; margin: auto;">
+	<h1 style="color: white;"><b><u>Overview of the project</u></b></h1>
+	</fieldset>
+	<hr style="margin: 10px;">
+ <h2>Background</h2>
+ <p>This project deals with the development of a Software Requirements Specification (SRS) document that specifies what an airline reservation system should and should not do. The SRS document is divided into five sections namely</p>
+  <hr>
+ <h2>System Objectives</h2>
+ <p>This section deals with the goals and objectives of the system categorized by customers (passengers) and airline administration. It helps us to know about the future perspective of airline management system.</p>
+<hr>
+
+<h2>System Context</h2>
+<p>This section shows the environment and boundaries of the ARS and the entities with which it interacts. It helps us to see how the system fits into the existing system.</p>
+<hr>
+
+<h2>Functional Requirements</h2>
+<p>This section is the bulk of the document and precisely states the functions of the system – what it should do and what it should not do. This section is split into subsection is divided into three module i.e Inventory System, Fair Quote and Ticketing , Departure Control System. A consistent terminology has been followed throughout and the terms are explained in the appendix. The subsections follow a logical sequence that reflects the real world. For example, a customer cannot reschedule a ticket unless he has bought one earlier and cannot buy one unless he has checked its availability.</p>
+<hr>
+
+<h2>Non-functional Requirements</h2>
+<p>This section deals with the non functional aspect such as what will the response time when the user will request, what should the processing time of the particular response etc.</p>
+<hr>
+
+<h2>Future Requirements</h2>
+<p>This section specification should not have to be implemented in this version. But whenever the changes are required it should be added in new versions. The new change must be implemented if required.</p>
+<hr>
+
+<h2>System objective</h2>
+<p>Airline Reservations Systems contain airline schedules, fare tariffs, passenger reservations and ticket records.<br><br>
+
+From the viewpoint of the airline –<br><br>
+
+Minimize repetitive work done by the system administrator and reservation.<br><br>
+
+Maintain consistency for the customer for accessing the ARS.<br><br>
+
+Increases the revenue for ARS in fewer spans of time as more and user can use.<br><br>
+
+Easy to use, learn and manage the ARS.<br><br>
+
+Minimize the number of vacant seats on a flight and maximize flight capacity utilization.<br><br>
+
+Increase awareness among frequent travelers about various special offers and discounts.<br><br>
+
+Reduce effort and frustration for travelers in scheduling a trip, especially by reducing the search effort for the flight they need to take.<br><br>
+
+Check the validity of input data and give a feedback to the user in case of errors or inconsistency.<br><br>
+
+Protect customers’ privacy concerns.<br><br>
+
+Make it easy for travelers to check the ticket status or make changes to their trip.</p>
+<hr>
+
+<h2>System Context</h2>
+<p>The ARS will provide the following types of easy-to-use, interactive, and intuitive graphical interfaces according to HCIU (Human computer interface usability).<br><br>
+
+The ARS will provide an easy-to-use, intuitive Graphical User Interface (GUI) as part of the Administrator’s working desktop environment.<br><br>
+
+The ARS will also provide an interactive GUI, on the World Wide Web for the general customers.<br><br>
+
+The ARS will also provide an easy-to-use, simple user interface, which can be accessed by the customers through internet from anywhere. This interface shall provide access, only to the following functionalities, namely, check flight schedule and check ticket status including any change in the flight timings. The functionality available through this website interface is limited because of security constraints.<br><br>
+
+The system and its environment and the interactions between them are depicted in the diagram below.<br><br>
+
+Flight Schedule Database<br><br>
+
+DB-Reservations<br><br>
+
+DB-User<br><br>
+
+DB-Reservations<br><br>
+
+Customer<br><br>
+
+Via Web<br><br>
+
+DB-User<br><br>
+
+DB-Schedule<br><br>
+
+I<br><br>
+
+N<br><br>
+
+T<br><br>
+
+E<br><br>
+
+R<br><br>
+
+F<br><br>
+
+A<br><br>
+
+C<br><br>
+
+E<br><br>
+
+‘CW’<br><br>
+
+ARS software<br><br>
+
+INTERFACE ‘A’<br><br>
+
+Administrator</p>
+<hr>
+
+<h2>Functional Requirements</h2>
+<p>Three Modules are mainly involved in KF Airline System, they are:<br><br>
+
+Inventory System<br><br>
+
+Fair Quote and Ticketing<br><br>
+
+Departure Control System<br><br>
+
+It can be further divided into following sub category:</p>
+<hr>
+
+<h2>User Accounts</h2>
+<p>The passenger, who will henceforth be called the ‘user’, can choose whether he is a guest (wants to check the availability of tickets, check flight schedules) or a registered user (by registering himself/creating an account using which he can buy /reserve tickets).<br><br>
+
+Registered User mainly concerns a person who has travelled/booked seats earlier, has a user id and a password plus his personal information stored in the ARS. A registered user will be able to check the availability of tickets as well as block/buy a ticket by logging into the system.<br><br>
+
+A guest is a person who has not registered himself with the system. A guest can only check the availability of tickets and cannot block or buy tickets.</p>
+<hr>
+
+<h2>Checking Availability</h2>
+<p>Origin city and destination city,<br><br>
+
+Class (The inventory of an airline is generally divided into service classes (e.g. First, Business or Economy class) and up to 26 booking classes, for which different prices and booking conditions apply),<br><br>
+
+One-way or round trip (in case, the trip is a round trip, the system shall also ask the user to enter the departure date on the return trip),<br><br>
+
+Departure date and<br><br>
+
+The number of adult passengers, children and senior citizens.<br><br>
+
+The system then queries the reservation database to check which of the flights on the schedule have seats available. The system displays the results in a suitable form (a tabular form) with the following information depicted for each flight number:<br><br>
+
+The flight number,<br><br>
+
+Departure time in origin city,<br><br>
+
+Arrival time in destination city,<br><br>
+
+The duration of the flight (taking into account the possibility of a change of time zone) and<br><br>
+
+The number of seats available on that flight.</p>
+<hr>
+
+<h2>Making Reservations</h2>
+<p>If yes, and if the user has been a guest, he will have to first register and become a registered user and then log onto the system.<br><br>
+
+If the user is already a registered user, and if he has logged on already, he can block/buy the ticket.<br><br>
+
+The system will now authenticate the user, checking whether his user id and password are correct or not.<br><br>
+
+Having taken the input from the user, the system shall now proceed to update the reservation database.<br><br>
+
+It will decrement the number of available seats on the particular flight for the particular class by the number of travelers being represented by the user.<br><br>
+
+The system accesses the registered user’s profile and charges the price of the ticket to his credit card number.<br><br>
+
+It simultaneously generates a confirmation number and displays it to the user for him to note down.<br><br>
+
+The ticket has been reserved.</p>
+<hr>
+
+<h2>Reschedule Ticket</h2>
+<p>The system shall now ask the user to select new dates from the calendar-menu.<br><br>
+
+In case, there are no available tickets for the dates entered, it displays a suitable message informing him that rescheduling to that date is not possible.<br><br>
+
+In case there are tickets available, the system asks the user to select the flight number for the trip and updates the database.<br><br>
+
+The system accesses reservation database and decrements the number of available seats on the flight(s) by the number of members in the user’s travel party.<br><br>
+
+It then increments the entry for the previous flight by the same number to reflect an increase in the available seats on it as a result of the rescheduling.</p>
+<hr>
+
+<h2>Cancellation</h2>
+<p>Here, it asks for the confirmation number and accesses reservation database and presents the details of the trip including but not limited to origin city, destination city, date of departure and date of arrival (in case the trip is a round trip).<br><br>
+
+It then lists the applicable rules and regulations for cancellation of tickets and depending on the system date and the departure date, it displays the percentage of the amount that would be refunded if the user cancels the ticket.<br><br>
+
+After the user cancels the ticket, the system generates a cancellation number.<br><br>
+
+It accesses reservation database and updates it by incrementing the number of available seats.</p>
+<hr>
+
+<h2>Update Profile</h2>
+<p>The system shall enable the user to update his profile at any time. Changes can be made in fields including but not limited to address, phone number and preferred credit card number.</p>
+<hr>
+
+<h2>View Ticket Status</h2>
+<p>The system shall allow a user to view all information about his trip. After logging him on, it asks for his blocking number or his confirmation number. It accesses DB-reservation and retrieves the details of the trip and presents them to the user in a convenient format, including any last minute changes to the flight timings etc. Such changes will be highlighted.</p>
+<hr>
+
+<h2>Query Flight Details</h2>
+<p>The system shall allow any user (registered or non registered) to access the details about the arrival and departure times of a flight by requesting the user to input the flight number and date. The system accesses DB-schedule and presents the time of arrival and departure.</p>
+<hr> 
+
+<h1 style="color: red; font-size: 40px;on">Non-functional Requirements</h1>
+<hr>
+
+<h2>Performance</h2>
+<p>Response time of the Airline Reservation System should be less than 2 second most of the time. Response time refers to the waiting time while the system accesses, queries and retrieves the information from the databases. ARS shall show no visible deterioration in response time as the number of users or flight schedule data increases.</p>
+<hr>
+
+<h2>Reliability</h2>
+<p>ARS shall always provide real time information about flight availability information. ARS shall be robust enough to have a high degree of fault tolerance. For example, if the user enters a negative number of passengers or a value too large, the system should not crash and shall identify the invalid input and produce a suitable error message.</p>
+<hr>
+
+<h2>Usability</h2>
+<p>The web interface should be intuitive and easily navigable Users should be able to understand the menu and options provided by ARS.</p>
+<hr>
+
+<h2>Integrity</h2>
+<p>Only system administer has the right to change system parameters, such as pricing policy etc. The system should be secure and must use encryption to protect the databases.</p>
+<hr>
+
+<h2>Interoperability</h2>
+<p>ARS shall minimize the effort required to couple it to another system, such as flight schedule database system.</p>
+<hr>
+
+<h2>Future Requirements</h2>
+<p>Support for waiting list functionality<br><br>
+
+ARS shall be made more dynamic and helpful to the users by enabling it to send instant messages to the passengers, of a cancelled or rescheduled flight, through email, phone, fax etc., informing them about the change, and providing them with other feasible alternatives<br><br>
+
+Information about the kind of meals served in a flight and the type of entertainment offered on a flight should be incorporated into the system.<br><br>
+
+Choices like aisle or window seats shall be provided to the users.<br><br>
+
+Provide service integration with auto rental agencies and hotel chains.</p>
+</fieldset>
+</body>
+</html>
